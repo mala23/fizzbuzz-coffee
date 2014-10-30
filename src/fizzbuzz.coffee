@@ -1,4 +1,18 @@
-isDivisibleByThree = (number) ->
-  number % 3 == 0
+class Fizzbuzz
 
-module.exports = isDivisibleByThree
+  isDivisibleByThree: (number) ->
+    # number % 3 == 0
+    @isDivisibleBy number, 3
+
+  isDivisibleByFive: (number) ->
+    # number % 5 == 0
+    @isDivisibleBy number, 5
+
+  isDivisibleBy: (number, divisor) ->
+    number % divisor == 0
+
+  play: (number) ->
+    return "Fizz" if @isDivisibleBy number, 3
+    return "Buzz" if @isDivisibleBy number, 5
+
+module.exports = Fizzbuzz
