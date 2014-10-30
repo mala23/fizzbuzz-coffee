@@ -12,6 +12,7 @@ class Fizzbuzz
     number % divisor == 0
 
   play: (number) ->
+    return "Fizzbuzz" if @isDivisbleBy number, 15
     return "Fizz" if @isDivisibleBy number, 3
     return "Buzz" if @isDivisibleBy number, 5
 
